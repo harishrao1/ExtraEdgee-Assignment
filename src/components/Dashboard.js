@@ -4,7 +4,8 @@ import CardData from "./CardData";
 import { useDispatch, useSelector } from "react-redux";
 import fetchUser from "../redux/API";
 import { userActions } from "../redux/userSlice";
-import Shimmer from "./Shimmer";
+import Shimmer from "./Shimmer/Shimmer";
+import Loader from "./Loader/Loader";
 const Dashboard = () => {
   const userList = useSelector((state) => state.userReducer.userList);
   // console.log("UserLIst in component home", userList);
@@ -25,7 +26,7 @@ const Dashboard = () => {
     <>
       <Box mt={3}>
         {!userList.length ? (
-          <Shimmer />
+          <Loader /> || <Shimmer />
         ) : (
           <Flex flexWrap="wrap" gap={3} justifyContent="center">
             {userList?.map((item) => (

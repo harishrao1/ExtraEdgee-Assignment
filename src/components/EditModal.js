@@ -17,7 +17,7 @@ import { useDispatch, useSelector } from "react-redux";
 import validator from "validator";
 import { userActions } from "../redux/userSlice";
 
-const UserModal = ({ isOpen, onOpen, onClose, setOpenModal, userData }) => {
+const EditModal = ({ isOpen, onOpen, onClose, setOpenModal, userData }) => {
   const initialRef = React.useRef(null);
   const finalRef = React.useRef(null);
   const [email, setEmail] = useState("");
@@ -144,4 +144,4 @@ const UserModal = ({ isOpen, onOpen, onClose, setOpenModal, userData }) => {
     </>
   );
 };
-export default UserModal;
+export default EditModal;

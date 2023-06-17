@@ -21,7 +21,7 @@ import {
   AiOutlineGlobal,
 } from "react-icons/ai";
 
-import UserModal from "./UserModal";
+import EditModal from "./EditModal";
 
 const CardData = ({
   name,
@@ -83,7 +83,7 @@ const CardData = ({
         </CardFooter>
       </Card>
       {openModal && (
-        <UserModal
+        <EditModal
           isOpen={isOpen}
           onOpen={onOpen}
           onClose={onClose}
